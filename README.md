@@ -52,10 +52,10 @@ Lembre-se de trocar ```<seu-nome>``` pelo seu nome, por exemplo: ```git checkout
 
 Ótimo!
 
-Agora vamos entrar no diretório ```/.entregas``` para criar a pasta com o seu nome.
+Agora vamos entrar no diretório ```/entregas``` para criar a pasta com o seu nome.
 
 ```sh 
-cd .entregas
+cd entregas
 ```
 
 Crie um diretório com o seu nome para continuar. Faça:
