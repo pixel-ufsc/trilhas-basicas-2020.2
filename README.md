@@ -6,7 +6,7 @@
 
 # Boas-vindas 👋
 
-Olá trainee, tudo bem? 😀 Espero que sim! Este repositório será utilizado durante o processo trainee para entregar as atividades que você concluir ao longo da Trilha Básica de HTML, CSS e JavaScript! Sendo assim, toda semana você deverá fazer no mínimo um **pull request** para este repositório enviando tudo o que você andou trabalhando durante a semana. Além disso, você também poderá encontrar neste repositório algumas informações úteis para sua jornada dentro das trilhas básicas, como por exemplo exercícios.
+Olá trainee, tudo bem? 😀 Espero que sim! Este repositório será utilizado durante o processo trainee para entregar as atividades que você concluir ao longo das Trilhas Básicas de HTML, CSS e JavaScript! Sendo assim, toda semana você deverá fazer no mínimo um **pull request** para este repositório enviando tudo o que você andou trabalhando durante a semana. Além disso, você também poderá encontrar neste repositório algumas informações úteis para sua jornada dentro das trilhas básicas, como por exemplo exercícios.
 
 Ainda tem dúvidas? Mande uma mensagem lá no nosso slack #trilhas-basicas 😉
 
@@ -14,24 +14,24 @@ Ainda tem dúvidas? Mande uma mensagem lá no nosso slack #trilhas-basicas 😉
 
 > Você deve ter assistido aos vídeos de Git antes de fazer este tutorial. Se você ainda não assistiu, por favor, assista-os antes de continuar!
 
-A sua primeira atividade para iniciar a trilha básica do processo trainee de 2020.2 da Pixel, é criar um diretório com o seu nome e um arquivo ```<seu-nome>.md``` dentro do diretório criado neste repositório.
+A sua primeira atividade para iniciar as trilhas básicas do processo trainee de 2020.2 da Pixel, é criar um diretório com o seu nome e um arquivo ```<seu-nome>.md``` dentro do diretório criado neste repositório.
 
 Para fazer isso, você deverá primeiro clonar este repositório em sua máquina. 
 
 Vamos fazer isto! Primeiro você deve abrir o seu prompt de comando, entrar na pasta onde você quer que as informações do repositório sejam baixadas e executar o seguinte comando em seu terminal:
 
 ```sh
-git clone https://github.com/pixel-ufsc/trilha-basica-2020.2 trilha-basica
+git clone https://github.com/pixel-ufsc/trilhas-basicas-2020.2 trilhas-basicas
 ```
 
 Depois de aguardar alguns segundos, pronto! O repositório provavelmente foi clonado sem nenhum problema. (se por algum motivo ocorrer problemas durante essa etapa mande uma printscreen do erro em nosso canal no Slack ```trilhas-basicas```)
 
-Agora vamos entrar dentro da pasta ```trilha-basica``` que foi criada durante o nosso processo de clonagem do repositório .
+Agora vamos entrar dentro da pasta ```trilhas-basicas``` que foi criada durante o nosso processo de clonagem do repositório .
 
 Para isso, execute o seguinte comando em seu terminal:
 
 ```sh
-cd trilha-basica
+cd trilhas-basicas
 ```
 
 Pronto! Você já está dentro da pasta do repositório e tudo deve estar certo até aqui, vamos conferir usando o comando ```ls``` no Linux ou ```dir``` no Windows.
