@@ -1,0 +1,16 @@
+:root {
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-underline: #A7BC48;
+    --color-dark-gray: #272727;
+    --color-purple: #82327E;
+    --color-x-purple: #82327E 20%;
+    --color-x-translucent: #FFFFFF 6%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
