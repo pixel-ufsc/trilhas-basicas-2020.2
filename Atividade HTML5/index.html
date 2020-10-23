@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!-- Define as configurações gerais da página -->
+
+<head>
+    <!-- Define o UTF-8 como padrão de enconding -->
+    <meta charset="UTF-8">
+
+    <!-- Define o título da página -->
+    <title>Pixel</title>
+
+    <!-- Torna o site responsivo, leia: https://www.w3schools.com/css/css_rwd_viewport.asp -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Importa o arquivo CSS da página -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- Importa a fonte Poppins do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<!-- Corpo da página -->
+
+<body>
+
+    <!-- Cabeçalho da página, neste caso, irá envolver toda a parte inicial da página -->
+    <header id="header">
+
+        <!-- Navegação da página -->
+        <nav>
+
+            <img id="logo" src="./assets/logo.png" alt="Logo da Pixel">
+
+            <span class="open-menu" onclick="openMenu()">Abrir menu</span>
+
+            <div id="menus">
+                <span class="close-menu" onclick="closeMenu()">Fechar menu</span>
+                <ul id="site-menu">
+                    <li>
+                        <a href="javascript:scrollTo('header')">Início</a>
+                    </li>
+                    <li>
+                        <a href="javascript:scrollTo('about-us')">Sobre nós</a>
+                    </li>
+                    <li>
+                        <a href="javascript:scrollTo('services')">Serviços</a>
+                    </li>
+                    <li>
+                        <a href="javascript:scrollTo('portfolio')">Portfólio</a>
+                    </li>
+                    <li>
+                        Blog
+                    </li>
+                    <li>
+                        Processo seletivo
+                    </li>
+                </ul>
+
+                <ul id="social-menu">
+                    <li>
+                        <img src="./assets/icon-facebook.png" alt="Facebook">
+                    </li>
+                    <li>
+                        <img src="./assets/icon-linkedin.png" alt="LinkedIn">
+                    </li>
+                    <li>
+                        <img src="./assets/icon-instagram.png" alt="Instagram">
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="header-main">
+            <h1>Faça seus sites e aplicativos com quem entende.</h1>
+            <p>Trabalhamos com desenvolvimento de sites e aplicativos de alta qualidade. Faça seu orçamento agora mesmo
+                clicando no botão abaixo!</p>
+
+            <button>Fazer orçamento</button>
+        </div>
+    </header>
+
+    <!-- Conteúdo da página -->
+    <main>
+        <section id="about-us" class="section-primary">
+            <header class="center">
+                <h2>Sobre nós</h2>
+                <h6>Somos mais do que uma empresa</h6>
+            </header>
+            <div class="content">
+                <div class="text">
+                    <p>
+                        A Pixel é uma empresa júnior de Sistemas de Informação e Ciências da Computação da Universidade
+                        Federal de Santa Catarina fundada no início do ano de 2013 pelos membros, hoje honorários, Marco
+                        Antonio Burgin, Jean Hillesheim, Igor Vinicius Reynaldo Tibúrcio, André Dresche e Laura Kácser.
+                        No momento atual, temos como tutor o Professor José Eduardo De Lucca, do Departamento de
+                        Informática e Estatística da UFSC.
+                    </p>
+                    <p>
+                        Almejamos construir uma comunidade de membros e parceiros comprometidos com a inovação. Para
+                        tanto, instigamos os nossos membros a procurarem ser a melhor versão deles mesmos através da
+                        realização de projetos na área da tecnologia e pela incrível troca de experiência entre os
+                        nossos integrantes.
+                    </p>
+                    <p>
+                        Acreditamos fortemente que podemos mudar o mundo para melhor. Principalmente que pequenas ações
+                        podem acarretar em grandes resultados. Se existe um problema, pode ter certeza que iremos acabar
+                        com ele. Por isso, nossa missão procura não só desenvolver a sociedade em que estamos inseridos,
+                        mas também os integrantes da nossa equipe. Dessa forma, buscamos desenvolver conhecimento e
+                        empreendedorismo em nossos membros através da criação de soluções digitais que, ao mesmo tempo,
+                        façam a diferença na vida dos clientes.
+                    </p>
+                    <p>
+                        No momento, estamos nos esforçando para sermos referência em desenvolvimento web em
+                        Florianópolis.
+                    </p>
+                </div>
+                <div class="img">
+                    <img src="./assets/enej.png" alt="ENEJ">
+                </div>
+            </div>
+        </section>
+        <section id="services">
+            <header>
+                <h2>Serviços</h2>
+            </header>
+            <div class="content">
+                <div class="services-items">
+                    <div class="service-item">
+                        <img src="./assets/icon-dev-web.png" alt="Desenvolvimento web" class="item-icon">
+                        <h6>Desenvolvimento de sites</h6>
+                        <p>
+                            Desenvolvimento de sistemas web e sites baseados nas mais novas
+                            tecnologias, com a preocupação de adaptar ao ambiente mobile.
+                        </p>
+                    </div>
+                    <div class="service-item">
+                        <img src="./assets/icon-dev-apps.png" alt="Desenvolvimento de apps" class="item-icon">
+                        <h6>Desenvolvimento de aplicativos</h6>
+                        <p>
+                            Criamos aplicativos mobile multiplataformas com as melhores tecnologias do mercado.
+                        </p>
+                    </div>
+                    <div class="service-item">
+                        <img src="./assets/icon-consulting.png" alt="Consultoria" class="item-icon">
+                        <h6>Consultoria </h6>
+                        <p>
+                            Para quem possui um site ou sistema e precisa de ajuda. Ou para quem está a procura de uma
+                            solução ideal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio">
+            <header class="center">
+                <h2>Portfólio</h2>
+                <h6>Mais de 50 trabalhos em nosso portfólio</h6>
+            </header>
+            <div class="content">
+                <div class="portfolio-items">
+                    <div class="portfolio-item">
+                        <img src="./assets/portfolio-1.png" alt="INSS">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="./assets/portfolio-2.png" alt="INSS">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="./assets/portfolio-3.png" alt="INSS">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="stats-and-contact">
+            <div class="statistics">
+                <div class="statistic-item">
+                    <span class="number">
+                        +7
+                    </span>
+                    <span class="description">
+                        Anos de sucesso
+                    </span>
+                    <p>
+                        Estamos no mercado desde 2013 oferecendo serviços de alta qualidade.
+                    </p>
+                </div>
+                <div class="statistic-item">
+                    <span class="number">
+                        +50
+                    </span>
+                    <span class="description">
+                        Projetos realizados
+                    </span>
+                    <p>
+                        Ao longo de nossa trajetória já realizamos mais de 50 projetos dos mais variados tipos.
+                    </p>
+                </div>
+                <div class="statistic-item">
+                    <span class="number">
+                        +40
+                    </span>
+                    <span class="description">
+                        Pessoas impactadas
+                    </span>
+                    <p>
+                        Mais de 40 pessoas já passaram pela nossa empresa e foram impactados de alguma maneira.
+                    </p>
+                </div>
+            </div>
+            <form class="contact">
+                <h4>Entre em contato conosco.</h4>
+                <input type="text" placeholder="Seu nome">
+                <input type="email" placeholder="E-mail">
+                <textarea rows="7" placeholder="Mensagem"></textarea>
+                <input type="submit">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <img src="./assets/logo.png" alt="Pixel Logo">
+    </footer>
+
+    <script src="./scripts.js"></script>
+</body>
+
+</html>

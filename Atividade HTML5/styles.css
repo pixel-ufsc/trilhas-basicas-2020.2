@@ -1,0 +1,567 @@
+/* 
+
+Leia sobre seletores CSS em:
+https://www.w3schools.com/cssref/css_selectors.asp
+
+*/
+
+
+
+/* Define as propriedades globais do CSS da página */
+:root {
+    /* Cria uma variável backgroundColor com valor de #131313 */
+    --backgroundColor: #131313;
+    /* Cria uma variável primaryColor com valor de #82327E */
+    --primaryColor: #82327E;
+    /* Cria uma variável secondaryColor com valor de #A7BC48 */
+    --secondaryColor: #A7BC48;
+}
+
+/* Alterações em todo o corpo da página */
+body {
+    /* Define a fonte padrão como Poppins e caso essa fonte não exista, define uma fonte sans-serif */
+    font-family: 'Poppins', sans-serif;
+    /* Define o background geral da página passando a variável que definimos anteriormente */
+    background-color: var(--backgroundColor);
+    /* Define a cor de fonte padrão como branca */
+    color: white;
+    /* Define a altura da página para ocupar 100% da tela do dispositivo */
+    height: 100%;
+    /* Define a largura da página para ocupar 100% da tela do dispositivo */
+    width: 100%;
+    /* Remove as margens padrões da página */
+    margin: 0px;
+    /* Define a posição da página como absoluta */
+    position: absolute;
+}
+
+/* Alterações em botões comuns e botões de submit de formulário */
+button, input[type="submit"] {
+    /* Define o background do botão para a cor padrão definida */
+    background-color: var(--primaryColor);
+    /* Define o tamanho da fonte do botão */
+    font-size: 20px;
+    /* Define a "grossura" da fonte do botão */
+    font-weight: bold;
+    /* Define a cor de fonte do botão */
+    color: white;
+    /* Define os espaçamentos verticais e horizontais do botão */
+    padding: 15px 40px;
+    /* Remove as bordas do botão */
+    border: none;
+    /* Define o ponteiro do cursor */
+    cursor: pointer;
+    /* Adicione uma curvatura nos cantos da borda do botão */
+    border-radius: 80px;
+}
+
+
+/* Header */
+body > header {
+    padding: 30px 86px;
+    /* Define uma imagem como background do cabeçalho */
+    background: url(./assets/pixel-x.png);
+    /* Faz com que a imagem não se repita caso o tamanho da imagem seja menor que o tamanho total do cabeçalho */
+    background-repeat: no-repeat no-repeat;
+    /* Centraliza a imagem verticalmente e coloca-a a direita horizontalmente */
+    background-position: center right;
+    /* Aumenta em 85% o tamanho da imagem */
+    background-size: 85%;
+    height: 100%;
+    width: 100%;
+    /* Altera a propriedade padrão da box model no cálculo da largura e altura dos elementos (https://developer.mozilla.org/pt-BR/docs/Web/CSS/box-sizing) */
+    box-sizing: border-box;
+    /* Altera o modo de renderização da caixa */
+    display: flex;
+    /* Faz com que os elementos sejam renderizados em coluna */
+    flex-direction: column;
+    
+    /* Veja mais sobre flex-box em: https://origamid.com/projetos/flexbox-guia-completo/ */
+}
+
+body > header > nav {
+    display: flex;
+    /* Faz com que os elementos sejam renderizados em lado a lado */
+    flex-direction: row;
+    /* Centraliza os elementos verticalmente ao centro */
+    align-items: center;
+    /* Faz com que os elementos tenham espaço entre si horizontalmente */
+    justify-content: space-between;
+    width: 100%;
+}
+
+body > header > nav > div#menus {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+body > header > nav > span.open-menu {
+    display: none;
+}
+
+body > header > nav > div#menus span.close-menu {
+    display: none;
+}
+
+body > header > nav > div#menus ul {
+    display: flex;
+    flex-direction: row;
+    /* Remove as "bolinhas" das linhas UL */
+    list-style: none;
+    /* Remove a margem padrão das Ul's */
+    margin: 0px;
+    padding: 0px;
+}
+
+body > header > nav > div#menus ul#site-menu li {
+    margin-right: 27px;
+    cursor: pointer;
+}
+
+body > header > nav > div#menus ul#site-menu li > a {
+    color: white;
+    text-decoration: none;
+}
+
+body > header > nav > div#menus ul#site-menu li:hover {
+    /* Define uma borda em baixo do elemento */
+    border-bottom: 2px solid var(--secondaryColor);
+}
+
+body > header > nav > div#menus ul#social-menu li {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+body > header > div#header-main {
+    margin-top: auto;
+    margin-bottom: auto;
+    /* Define que o elemento só poderá ocupar 70% do tamanho total da tela do dispositivo (ou melhor do browser) */
+    max-width: 70%;
+}
+
+body > header > div#header-main h1 {
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0px;
+}
+
+body > header > div#header-main p {
+    font-weight: lighter;
+    font-size: 25px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Sections */
+main > section {
+    padding: 50px 86px;
+}
+
+main > section.section-primary {
+    background-color: var(--primaryColor);
+}
+
+main > section > header {
+    position: relative;
+    margin-bottom: 70px;
+    height: 150px;
+    background: url(./assets/pixel-x-mini-2.png);
+    background-repeat: no-repeat no-repeat;
+    background-position: left center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+}
+
+main > section > header.center {
+    width: auto;
+    text-align: center;
+    background: url(./assets/pixel-x-mini-1.png);
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+}
+
+main > section > header > h2 {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+main > section > header > h6 {
+    font-size: 30px;
+    font-weight: lighter;
+    margin: 0px;
+    margin-top: -15px;
+}
+
+/* About us */
+main > section#about-us > div.content {
+    display: flex;
+    align-items: center;
+}
+
+main > section#about-us > div.content > div.text p {
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+}
+
+main > section#about-us > div.content > div.text p:last-child {
+    margin-bottom: 0px;
+}
+
+main > section#about-us > div.content > div.img img {
+    /* Faz a imagem girar 2 deg */
+    transform: rotate(2deg);
+    border: 10px solid white;
+}
+
+/* Services */
+main > section#services > div.content > div.services-items {
+    /* Define o modo de renderização de elementos em grid */
+    display: grid;
+    /* Diz que terão 3 colunas de 32.2% do tamanho total do navegador em largura */
+    grid-template-columns: repeat(3, 32.2%);
+    /* Define um espaçamento em itens do grid de 20px */
+    grid-gap: 20px;
+    margin-top: -10px;
+
+    /* Leia mais sobre grids: https://css-tricks.com/snippets/css/complete-guide-grid/ */
+}
+
+main > section#services > div.content > div.services-items > div.service-item {
+    background-color: #272727;
+    padding: 40px;
+    cursor: pointer;
+    /* Define uma transição suave de cor de background */
+    transition: background-color .5s;
+}
+
+main > section#services > div.content > div.services-items > div.service-item:hover {
+    background-color: var(--primaryColor);
+}
+
+main > section#services > div.content > div.services-items > div.service-item h6 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+main > section#services > div.content > div.services-items > div.service-item p {
+    font-size: 18px;
+    font-weight: lighter;
+    margin: 0px;
+}
+
+/* Portfolio */
+main > section#portfolio {
+    background-color: #272727;
+    background-image: url(./assets/portfolio-bg.png);
+    background-repeat: no-repeat no-repeat;
+    background-position: left bottom;
+    padding-bottom: 70px;
+}
+
+main > section#portfolio > div.content > div.portfolio-items {
+    display: grid;
+    grid-template-columns: repeat(3, 32.2%);
+    grid-gap: 20px;
+    margin-top: -10px;
+}
+
+main > section#portfolio > div.content > div.portfolio-items > div.portfolio-item img {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Statistics and contact */
+main > div.stats-and-contact {
+    display: flex;
+    flex-direction: row;
+}
+
+main > div.stats-and-contact div.statistics {
+    position: relative;
+    width: 50%;
+    background-image: url(./assets/bg-statistics.png);
+}
+
+main > div.stats-and-contact form.contact {
+    width: 50%;
+}
+
+
+/* Statistics */
+main > div.stats-and-contact div.statistics {
+    padding: 92px 87px;
+    box-sizing: border-box;
+}
+
+main > div.stats-and-contact div.statistics div.statistic-item {
+    display: flex;
+    flex-direction: column;
+}
+
+main > div.stats-and-contact div.statistics div.statistic-item > span.number {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 54px;
+}
+
+main > div.stats-and-contact div.statistics div.statistic-item:first-child > span.number {
+    margin-top: 0px;
+}
+
+main > div.stats-and-contact div.statistics div.statistic-item > span.description {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+main > div.stats-and-contact div.statistics div.statistic-item > p {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Contact */
+main > div.stats-and-contact form.contact {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 72px;
+    justify-content: center;
+}
+
+main > div.stats-and-contact form.contact > h4 {
+    font-size: 54px;
+    font-weight: bold;
+    line-height: 60px;
+    margin-top: 0px;
+    margin-bottom: 35px;
+}
+
+main > div.stats-and-contact form.contact > input[type="text"],
+main > div.stats-and-contact form.contact > input[type="email"], 
+main > div.stats-and-contact form.contact > textarea {
+    background-color: #272727;
+    color: #cccccc;
+    border: none;
+    outline: none;
+    border-left: 4px solid var(--primaryColor);
+    padding: 30px 20px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+main > div.stats-and-contact form.contact > textarea {
+    resize: vertical;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 25px;
+}
+
+main > div.stats-and-contact form.contact > input[type="submit"] {
+    /* Define a largura do elemento para que ele ocupe somente o tamanho necessário */
+    width: fit-content;
+}
+
+footer {
+    background-color: #272727;
+    padding: 20px 86px;
+}
+
+/* Define regras de CSS somente se a tela do usuário for menor que 1030 pixels. */
+@media (max-width: 1030px) {
+    /* Header */
+    body > header {
+        background-size: 200%;
+        background-position: -100px;
+        padding: 30px 40px;
+    }
+
+    body > header > nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    body > header > nav > span.open-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    body > header > nav > div#menus {
+        display: none;
+    }
+
+    body > header > nav.opened > div#menus {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        right: 0;
+        background-color: #272727;
+        background-image: url(./assets/portfolio-bg.png);
+        background-repeat: no-repeat no-repeat;
+        background-position: left bottom;
+        height: 100%;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+
+        animation: openMenuAnimation .7s;
+    }
+    
+    body > header > nav.opened > div#menus span.close-menu {
+        display: block;
+        margin-bottom: 50px;
+    }
+
+    body > header > nav > div#menus ul#site-menu {
+        flex-direction: column;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    body > header > nav > div#menus ul#site-menu li {
+        margin-right: 0px;
+    }
+
+    body > header > nav.opened > div#menus ul#social-menu {
+        flex-direction: row;
+        margin-top: 30px;
+    }
+
+
+
+    body > header > div#header-main  {
+        max-width: 100%;
+    }
+
+    body > header > div#header-main h1 {
+        font-size: 1.6rem;
+    }
+
+    body > header > div#header-main p {
+        font-size: 1.2rem;
+    }
+
+    body > header > div#header-main button {
+        width: 100%;
+    }
+
+    /* Sections */
+    main > section {
+        padding: 50px 30px;
+    }
+
+    main > section > header {
+        width: auto;
+        text-align: center;
+        background-repeat: no-repeat no-repeat;
+        background-position: center center;
+    }
+
+    main > section > header > h2 {
+        font-size: 2.4rem;
+    }
+    
+    main > section > header > h6 {
+        font-size: 1rem;
+        margin-top: 2px;
+    }
+
+    /* About Us */
+    main > section#about-us > div.content {
+        flex-direction: column;
+    }
+
+    main > section#about-us > div.content > div.text p {
+        text-align: justify;
+        margin-right: 0px;
+        margin-top: -30px;
+    }
+    
+    main > section#about-us > div.content > div.text p:last-child {
+        margin-bottom: 40px;
+    }
+    
+    main > section#about-us > div.content > div.img img {
+        transform: rotate(0deg);
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Services */
+    main > section#services > div.content > div.services-items {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Portfolio */
+    main > section#portfolio > div.content > div.portfolio-items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Statistics and contact */
+    main > div.stats-and-contact {
+        flex-direction: column;
+    }
+
+    main > div.stats-and-contact div.statistics {
+        width: 100%;
+    }
+
+    main > div.stats-and-contact form.contact {
+        width: 100%;
+    }
+
+
+    /* Statistics */
+    main > div.stats-and-contact div.statistics {
+        padding: 42px 37px;
+        box-sizing: border-box;
+    }
+
+    /* Contact */
+    main > div.stats-and-contact form.contact {
+        box-sizing: border-box;
+        padding: 42px 37px;
+    }
+
+    main > div.stats-and-contact form.contact > h4 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    main > div.stats-and-contact form.contact > input[type="text"],
+    main > div.stats-and-contact form.contact > input[type="email"], 
+    main > div.stats-and-contact form.contact > textarea {
+        padding: 15px 10px;
+    }
+
+    main > div.stats-and-contact form.contact > input[type="submit"] {
+        width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        display: flex;
+        padding: 20px 0px;
+        justify-content: center;
+    }
+}
+
+@keyframes openMenuAnimation {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 0px;
+    }
+}
